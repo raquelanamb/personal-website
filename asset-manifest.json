@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2d276a5f.css",
-    "main.js": "/static/js/main.11be7a09.js",
+    "main.css": "/static/css/main.e3d77805.css",
+    "main.js": "/static/js/main.0f1c82f7.js",
     "static/js/488.efc1a227.chunk.js": "/static/js/488.efc1a227.chunk.js",
     "static/media/arthur.jpg": "/static/media/arthur.bddb87ec8f0a89a8114b.jpg",
     "static/media/harmoniac.png": "/static/media/harmoniac.fedb3f21934fe5cd1c35.png",
@@ -16,6 +16,7 @@
     "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
     "static/media/scikit.png": "/static/media/scikit.7c81e0aa80c1924e4e7b.png",
     "static/media/numpy.png": "/static/media/numpy.7deccf79a3075b4304d8.png",
+    "static/media/shell.jpg": "/static/media/shell.cad69fa8d72b1904b831.jpg",
     "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.c210719e60948b211a12.woff2",
     "static/media/c++.png": "/static/media/c++.904c659a2c4e76605892.png",
     "static/media/tensorflow.png": "/static/media/tensorflow.8820208b2a3b5433ea9f.png",
@@ -44,12 +45,12 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.2d276a5f.css.map": "/static/css/main.2d276a5f.css.map",
-    "main.11be7a09.js.map": "/static/js/main.11be7a09.js.map",
+    "main.e3d77805.css.map": "/static/css/main.e3d77805.css.map",
+    "main.0f1c82f7.js.map": "/static/js/main.0f1c82f7.js.map",
     "488.efc1a227.chunk.js.map": "/static/js/488.efc1a227.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d276a5f.css",
-    "static/js/main.11be7a09.js"
+    "static/css/main.e3d77805.css",
+    "static/js/main.0f1c82f7.js"
   ]
 }
