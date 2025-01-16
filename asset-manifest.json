@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.48fdb5e3.css",
-    "main.js": "/static/js/main.ddbd27fb.js",
+    "main.js": "/static/js/main.726765ba.js",
     "static/js/488.efc1a227.chunk.js": "/static/js/488.efc1a227.chunk.js",
     "static/media/arthur.jpg": "/static/media/arthur.bddb87ec8f0a89a8114b.jpg",
     "static/media/harmoniac.png": "/static/media/harmoniac.fedb3f21934fe5cd1c35.png",
@@ -21,18 +21,17 @@
     "static/media/c++.png": "/static/media/c++.904c659a2c4e76605892.png",
     "static/media/tensorflow.png": "/static/media/tensorflow.8820208b2a3b5433ea9f.png",
     "static/media/tailwind.png": "/static/media/tailwind.2654b38fb594d3be4996.png",
+    "static/media/wireshark.png": "/static/media/wireshark.c629330f9016cf6e8501.png",
     "static/media/java.png": "/static/media/java.47c1c1f0e6ca865347d1.png",
     "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
     "static/media/c.png": "/static/media/c.80cce73d8e9008afec45.png",
     "static/media/sql.png": "/static/media/sql.9c9e418452a111f0d760.png",
     "static/media/python.png": "/static/media/python.b55192b1739de6f331b2.png",
-    "static/media/css_.png": "/static/media/css_.9407ad358cdb22b8b1f0.png",
     "static/media/pandas.png": "/static/media/pandas.1db2e90bad520e4b87fe.png",
     "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
     "static/media/javascript.png": "/static/media/javascript.37aaa499412a7b851e98.png",
     "static/media/popopinions.png": "/static/media/popopinions.4f2dfa9af7b31c0dc49d.png",
     "static/media/masqueraded.png": "/static/media/masqueraded.20ec4a05f4e68a26797b.png",
-    "static/media/latex.png": "/static/media/latex.c8caf6d399e673e754bf.png",
     "static/media/html.png": "/static/media/html.bf93cbe67c0f468fc405.png",
     "static/media/react.png": "/static/media/react.4088f2427b58a73e5208.png",
     "static/media/hangman.png": "/static/media/hangman.1c59610f0fb11b64b189.png",
@@ -46,11 +45,11 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.48fdb5e3.css.map": "/static/css/main.48fdb5e3.css.map",
-    "main.ddbd27fb.js.map": "/static/js/main.ddbd27fb.js.map",
+    "main.726765ba.js.map": "/static/js/main.726765ba.js.map",
     "488.efc1a227.chunk.js.map": "/static/js/488.efc1a227.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.48fdb5e3.css",
-    "static/js/main.ddbd27fb.js"
+    "static/js/main.726765ba.js"
   ]
 }
