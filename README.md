@@ -1,7 +1,6 @@
 # personal-website
 
 This is my personal website, built using **React + Tailwind CSS** and deployed via **GitHub Pages**. 
-
 It serves as a professional portfolio showcasing my projects, skills, and background.
 
 ## Features:
