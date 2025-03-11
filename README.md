@@ -7,7 +7,7 @@ It serves as a professional portfolio showcasing my projects, skills, and backgr
 - **Clean & Modern UI** with Tailwind CSS.
 - **Project Carousel** exhibiting my work.
 - **Experience Timeline** showcasing my relevant experience.
-- **Technologies Section** with a Matrix-inspired background effect.
+- **Technologies and Education Sections**.
 - **Responsive Design** for all devices.
 
 
