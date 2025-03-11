@@ -15,7 +15,7 @@ const EducationSection = () => {
       degree: "Master of Science in Computer Science",
       year: "Expected May 2026",
       key_details: "Focusing in artificial intelligence and its applications to cybersecurity.",
-      courses: "Intrusion Detection and Digital Defense, Theoretical Computer Science.",
+      courses: "Cyber Defense and Operations, Theoretical Computer Science.",
     },
     {
       school: "University of Massachusetts Dartmouth",
@@ -23,12 +23,12 @@ const EducationSection = () => {
       year: "September 2023 - May 2025",
       key_details: "NSF CyberCorps SFS, Big Data Club VP, Research Assistant.",
       gpa: "4.0",
-      courses: "Artificial Intelligence, Data Mining and Knowledge Discovery, Machine Learning, Digital Forensics, Design of Operating Systems.",
-      accomplishments: "National Science Foundation CyberCorps Scholarship for Service recipient, Vice President of Big Data Club, College of Engineering Research Assistant, Chancellor's List.",
+      courses: "Artificial Intelligence, Data Mining and Knowledge Discovery, Machine Learning, Digital Forensics, Design of Operating Systems, Statistics.",
+      accomplishments: "National Science Foundation CyberCorps Scholarship for Service recipient, College of Engineering Research Assistant, Big Data Club (Vice President), Navigating Leadership, Math Circle, Summa Cum Laude, Chancellor's List.",
     },
     {
       school: "Massasoit Community College",
-      degree: "Associate Degrees in Computer Science and Mathematics",
+      degree: "Associate of Science in Mathematics and Computer Science",
       year: "September 2021 - May 2023",
       gpa: "4.0",
       other: "Graduated with Highest Honors and transferred to UMass Dartmouth.",
@@ -37,11 +37,11 @@ const EducationSection = () => {
 
   return (
     <section id="education">
-      <div className="flex flex-col items-center gap-6 w-full px-4">
+      <div className="flex flex-col items-center gap-6 w-full font-tomorrow px-4">
         {educationData.map((edu, index) => (
           <motion.div
             key={index}
-            className="education-card shadow-lg rounded-lg bg-white p-4 w-full max-w-md"
+            className="education-card shadow-lg rounded-lg bg-white p-4 w-full max-w-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xld"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -57,7 +57,7 @@ const EducationSection = () => {
             >
               <div>
                 <h3 className="text-lg font-bold">{edu.degree}</h3>
-                <p className="text-sm text-blue-700">{edu.school}</p>
+                <p className="text-sm" style={{ color: '#4769a1' }}>{edu.school}</p>
                 <p className="text-xs text-gray-500 italic">{edu.year}</p>
               </div>
               <span className="text-gray-500">

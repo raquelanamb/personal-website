@@ -1,6 +1,6 @@
 /* index.css */
 
-@import 'locomotive-scroll/dist/locomotive-scroll.css'; /* For smooth scrolling */
+@import 'locomotive-scroll/dist/locomotive-scroll.css'; /* for smooth scrolling */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -29,6 +29,6 @@ html {
   }
   
   nav a:hover {
-    color: #ffd700;
+    color: #cc924c;
   }
   

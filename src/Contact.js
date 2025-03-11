@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaGithub, FaLinkedin, FaPhoneAlt, FaEnvelope, FaClipboard } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaClipboard } from 'react-icons/fa';
 
 const Contact = () => {
   const [copyMessage, setCopyMessage] = useState('');
@@ -7,7 +7,7 @@ const Contact = () => {
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
     setCopyMessage('Copied to clipboard!');
-    setTimeout(() => setCopyMessage(''), 1500); // Clear message after 2 seconds
+    setTimeout(() => setCopyMessage(''), 1500); // clear message after 2 seconds
   };
 
   return (
@@ -26,14 +26,14 @@ const Contact = () => {
           href="https://github.com/raquelanamb"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-black text-4xl hover:text-yellow-400 hover:transform hover:-translate-y-1 transition duration-300"
+          className="text-black text-4xl hover:text-white hover:transform hover:-translate-y-1 transition duration-300"
         >
           <FaGithub />
         </a>
       </div>
 
       {/* Plain Text Contact Details with Copy Buttons */}
-        <div className="flex items-center space-x-2 pt-4">
+        <div className="flex items-center font-tomorrow space-x-2 pt-4">
           <p className="text-lg">
             <strong>Email:</strong> rbush@umassd.edu
           </p>
@@ -45,7 +45,7 @@ const Contact = () => {
             <FaClipboard />
           </button>
         </div>
-        <div className="text-center space-y-4">
+        <div className="text-center font-tomorrow space-y-4">
         <div className="flex items-center space-x-2">
           <p className="text-lg">
             <strong>Phone:</strong> +1 (442) 234-2499
@@ -60,7 +60,7 @@ const Contact = () => {
         </div>
 
         {/* Copy Message */}
-        {copyMessage && <p className="text-green-500">{copyMessage}</p>}
+        {copyMessage && <p className="text-white">{copyMessage}</p>}
       </div>
     </div>
   );

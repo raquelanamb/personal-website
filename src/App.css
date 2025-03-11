@@ -2,18 +2,21 @@
 
 html, body {
   overflow-x: hidden;
-  height: 100%;
-  overflow-y: auto;
+  height: auto;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
 }
 
 html {
-  scroll-padding-top: 0; /* Adjust this value to ensure there's no extra space */
+  scroll-padding-top: 0; /* ensure no extra space */
 }
 
 .App {
   text-align: center;
+  position: relative;
+  height: auto; /* allow natural height */
 }
 
 .App-logo {
@@ -24,6 +27,20 @@ html {
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/*
+@media only screen and (max-width: 768px) {
+  body {
+      padding-top: 115px;
+  }
+}
+  */
+
+@media only screen and (max-width: 768px) {
+  #landing {
+      padding-top: 115px; /* push content down */
   }
 }
 
@@ -51,70 +68,136 @@ html {
   }
 }
 
-.dropdown-menu {
-  z-index: 40; /* Lower than navbar */
-}
-
-nav {
-  z-index: 50; /* Higher than dropdown */
-}
-
-#landing {
-  padding-top: 120px;
-}
-
-.app-container {
-  position: relative; /* Ensure content sits above the background */
-  z-index: 1; /* Content z-index higher than -1 */
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50; /* Higher than the background but lower than content */
+  pointer-events: none; /* Ensures it does not interfere with clicks */
 }
 
 
+.section {
+  padding: 16px;
+  margin: 40px 0;
+  position: relative;
+}
 
-/* Navbar */
-/* Dropdown Initial State */
+/* NAVBAR SECTION */
 .dropdown-hidden {
   transform: translateY(-10px);
   opacity: 0;
   transition: all 1s ease;
 }
 
-/* Dropdown Visible State */
 .dropdown-visible {
   transform: translateY(0);
   opacity: 1;
   transition: all 1s ease;
 }
+
 nav {
-  margin: 0; /* Ensure no margin affects positioning */
-  padding: 0; /* Ensure consistent padding */
-  transform: none; /* Avoid unintended movement */
+  margin: 0;
+  padding: 0;
+  transform: none; /* avoid unintended movement */
+  z-index: 50;
+}
+
+.dropdown-menu {
+  z-index: 40;
+}
+
+.navbar-menu {
+  position: fixed;
+  top: 0;        
+  left: 0;     
+  width: 100%;
+  z-index: 1000;
 }
 
 
 
-/* Education cards */
-/* Container for the cards */
+/* LANDING SECTION */
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Move it behind the particles */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app-container {
+  position: relative; /* ensure content sits above background */
+  z-index: 1;
+}
+
+
+
+/* ABOUT SECTION */
+.resume-button {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.resume-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom cursor on hover over Arthur: */
+.photo {
+  cursor: url('cursor_arthur.png'), auto;
+}
+
+
+
+/* EDUCATION SECTION */
 .flip-card {
-  perspective: 1500px; /* Enhanced depth for a more immersive effect */
+  perspective: 1500px; /* enhanced depth for more immersive effect */
   cursor: pointer;
   width: 300px;
   height: 200px;
   position: relative;
   border-radius: 12px;
-  transition: transform 0.2s ease-in-out; /* Slight hover scale effect */
+  transition: transform 0.2s ease-in-out; /* slight hover scale effect */
 }
 
 .flip-card:hover {
-  transform: scale(1.03); /* Subtle zoom on hover for a polished feel */
+  transform: scale(1.03); /* subtle zoom on hover */
 }
 
-/* Inner Flip Mechanism */
 .flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* Smoother easing for the flip */
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* smoother easing for the flip */
   transform-style: preserve-3d;
 }
 
@@ -122,7 +205,6 @@ nav {
   transform: rotateY(180deg);
 }
 
-/* Front and Back Faces */
 .flip-card-front,
 .flip-card-back {
   position: absolute;
@@ -130,17 +212,16 @@ nav {
   height: 100%;
   backface-visibility: hidden;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Softer shadow for more realism */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* softer shadow for more realism */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  transition: box-shadow 0.3s ease-in-out; /* Smooth shadow transition */
+  transition: box-shadow 0.3s ease-in-out; /* smooth shadow transition */
 }
 
-/* Front Face Styles */
 .flip-card-front {
   background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
   color: #333;
@@ -148,22 +229,20 @@ nav {
 
 .flip-card-front:hover,
 .flip-card-back:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slightly intensified shadow on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* slightly intensified shadow on hover */
 }
 
-/* Back Face Styles */
 .flip-card-back {
   background: linear-gradient(to bottom right, #eef0f2, #dee1e4);
   transform: rotateY(180deg);
   color: #555;
-  overflow-y: auto; /* Enable vertical scrolling */
-  max-height: 100%; /* Constrain to card height */
-  padding: 16px; /* Add padding around content */
-  box-sizing: border-box; /* Ensure padding doesn’t affect dimensions */
-  padding-right: 20px; /* Extra space to avoid scrollbar overlap */
+  overflow-y: auto; /* enable vertical scrolling */
+  max-height: 100%; /* constrain to card height */
+  padding: 16px;
+  box-sizing: border-box; /* ensure padding doesn’t affect dimensions */
+  padding-right: 20px; /* extra space to avoid scrollbar overlap */
 }
 
-/* Typography */
 .flip-card h3 {
   font-size: 1.25rem;
   font-weight: bold;
@@ -176,58 +255,63 @@ nav {
   color: #555;
 }
 
-
-
-
-/* Projects Carousel */
-/* Parent Container */
-.projects-carousel-container {
-  position: relative;
-  overflow: visible; /* Ensure buttons are not clipped */
+.education-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Carousel Buttons */
+.education-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* PROJECTS SECTION */
+.projects-carousel-container {
+  position: relative;
+  overflow: visible; /* ensure buttons are not clipped */
+}
+
 .slick-prev, 
 .slick-next {
   z-index: 1000;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%); /* Keep centered */
+  transform: translateY(-50%); /* keep centered */
   width: 40px;
   height: 40px;
-  background-color: white;
-  color: black;
-  border-radius: 50%;
+  background-color: white; /* default background color */
+  color: black; /* default icon color */
+  border-radius: 50%; /* rounded buttons */
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  opacity: 0.15;
-  box-shadow: none;
+  opacity: 0.4; /* default opacity */
+  box-shadow: none; /* no shadow by default */
   border: none;
   transition: transform 0.3s ease-out, background-color 0.3s ease-out, opacity 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
-/* Left and Right Arrows */
 .slick-prev {
-  left: -20px; /* Adjust for visibility */
+  left: -20px;
 }
 
 .slick-next {
-  right: -20px; /* Adjust for visibility */
+  right: -20px;
 }
 
 /* Arrow Icons */
 .slick-prev::before {
-  content: '\f104'; /* Unicode for left arrow */
-  font-family: 'Font Awesome 5 Free'; /* Ensure this matches your import */
-  font-weight: 900; /* Optional for bold icons */
+  content: '\f104'; /* left arrow */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
   color: black;
   font-size: 20px;
 }
 
 .slick-next::before {
-  content: '\f105'; /* Unicode for right arrow */
+  content: '\f105'; /* right arrow */
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   color: black;
@@ -237,11 +321,11 @@ nav {
 /* Hover Effect */
 .slick-prev:hover, 
 .slick-next:hover {
-  transform: translateY(-50%) scale(1.15); /* Scale and maintain position */
-  opacity: 0.5; 
-  background-color: #ffffff; 
-  color: white; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-50%) scale(1.15);
+  opacity: 0.4;
+  background-color: #ffffff;
+  color: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Reset Default Button Styles */
@@ -255,33 +339,100 @@ button,
 }
 
 .carousel-item {
-  box-sizing: border-box; /* Ensures padding is included in width */
-  padding: 0 25px; /* Adds horizontal spacing between items */
+  box-sizing: border-box; /* ensures padding included in width */
+  padding: 0 25px; /* adds horizontal spacing between items */
 }
 
 /* Active/Clicked State */
 .slick-prev:active, 
 .slick-next:active {
-  opacity: 1; /* Fully visible when clicked or focused */
-  background-color: #ffffff; /* A darker shade to indicate active state */
-  color: white; /* Icon color for visibility */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Enhanced shadow for emphasis */
+  transform: translateY(-50%) scale(0.95); /* pressed-in effect */
+  opacity: 1; /* fully visible during click */
+  background-color: #f0f0f0; /* slightly darker during click */
+  color: black; /* icon color remain visible */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* enhanced shadow for click */
 }
 
 /* Focus State - Matches Default State */
 .slick-prev:focus, 
 .slick-next:focus {
-  opacity: 0.15; /* Low opacity like default state */
-  background-color: white; /* Default background */
-  color: black; /* Default icon color */
-  box-shadow: none; /* No shadow like default */
+  opacity: 0.4;
+  background-color: white;
+  color: black;
+  box-shadow: none;
 }
 
 
 
 
 
-/* Experience timeline */
+/* EXPERIENCE SECTION */
+/* Make sure cards are aligned alternately for larger screens */
+@media (min-width: 1024px) {
+  .timeline-item:nth-child(odd) {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .timeline-item:nth-child(even) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+/* Center cards for smaller screens */
+@media (max-width: 1024px) {
+  .timeline-item {
+    display: flex;
+    justify-content: center;
+  }
+
+  .timeline-item .timeline-card {
+    margin: 0 auto; /* consistent centering */
+  }
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+  .timeline-card {
+    /* Widen timeline cards: */
+    width: 90%;
+    max-width: 400px;
+  }
+
+  /* Make text inside cards scrollable */
+  .timeline-card p {
+    max-height: 150px; /* adjust height as needed */
+    overflow-y: auto;
+    padding-right: 8px; /* add padding to prevent overlap w/ scrollbar */
+  }
+}
+
+/* Scrollbar Styles for Webkit Browsers (Chrome, Edge, Safari) */
+.timeline-card p::-webkit-scrollbar {
+  width: 8px; /* width of the scrollbar */
+}
+
+.timeline-card p::-webkit-scrollbar-track {
+  background: #f1f1f1; /* background color of the scrollbar track */
+  border-radius: 4px; /* rounded corners */
+}
+
+.timeline-card p::-webkit-scrollbar-thumb {
+  background: #888; /* color of scrollbar thumb */
+  border-radius: 4px; /* rounded corners */
+}
+
+.timeline-card p::-webkit-scrollbar-thumb:hover {
+  background: #959595; /* color when hovering over scrollbar thumb */
+}
+
+/* Scrollbar Styles for Firefox */
+.timeline-card p {
+  scrollbar-width: thin; /* make the scrollbar thinner */
+  scrollbar-color: #888 #f1f1f1; /* thumb color and track color */
+}
+
 .timeline-container {
   position: relative;
   width: 100%;
@@ -291,6 +442,13 @@ button,
 .timeline-line {
   height: 100%;
   top: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.684) 50%,
+    rgba(0, 0, 0, 0.05) 50%
+  );
+  background-size: 8px 8px; /* finer spacing for better visibility */
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2); /* subtle glow */
 }
 
 .timeline-item {
@@ -309,6 +467,7 @@ button,
 
 .timeline-node {
   top: 0;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 /* Initial hidden state */
@@ -317,23 +476,50 @@ button,
   transform: translateY(20px);
 }
 
+.timeline-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 90%; /* use a percentage for responsive sizing */
+  max-width: 400px; /* maintain max width for larger screens */
+}
+
+.timeline-date {
+  white-space: nowrap;
+}
+
+.timeline-date,
+.timeline-node {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0); /* proper horizontal centering */
+}
+
+
+/* Hover effect for the card */
+.timeline-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Move the date up when the card is hovered */
+.timeline-card:hover ~ .timeline-date {
+  transform: translate(-50%, -10px); /* combine horizontal centering & upward movement */
+  transition: transform 0.3s ease;
+}
+
+/* Move the dot up when the card is hovered */
+.timeline-card:hover ~ .timeline-node {
+  transform: translate(-50%, calc(-4px - 50%)); /* moves dot up & keeps it centered */
+  transition: transform 0.3s ease;
+}
+
+
+
 /* Animation */
 .animate-visible {
   opacity: 1;
   transform: translateY(0);
   transition: all 0.7s ease-out;
 }
-
-
-
-
-
-/* About */
-/* Custom cursor on hover over Arthur */
-.photo {
-  cursor: url('cursor_arthur.png'), auto;
-}
-
 
 
 

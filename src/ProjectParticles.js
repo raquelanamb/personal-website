@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "./background.css";
 
-const Background = () => {
+const ProjectParticles = () => {
     const [particlesLoaded, setParticlesLoaded] = useState(false);
 
     useEffect(() => {
-        // Check if script is already loaded
         if (!window.tsParticles) {
             const script = document.createElement("script");
             script.src = "https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js";
@@ -13,7 +11,7 @@ const Background = () => {
             script.onload = () => setParticlesLoaded(true);
             document.body.appendChild(script);
 
-            return () => document.body.removeChild(script); // Cleanup
+            return () => document.body.removeChild(script);
         } else {
             setParticlesLoaded(true);
         }
@@ -21,22 +19,24 @@ const Background = () => {
 
     useEffect(() => {
         if (particlesLoaded && window.tsParticles) {
-            window.tsParticles.load("tsparticles", {
-                fullScreen: { enable: true, zIndex: -1 },
+            window.tsParticles.load("projectParticles", {
+                fullScreen: { enable: true },
                 particles: {
-                    number: { value: 100 },
+                    number: { value: 80 },
                     move: { enable: true, speed: 0.4 },
-                    opacity: { value: 1 },
+                    opacity: { value: 0.5 },
                     shape: { type: "circle" },
                     size: { value: 3.5 },
-                    color: { value: "#ffffff" },
-                    links: { enable: true, color: "#ffffff", distance: 150, opacity: 0.4 },
+                    color: { value: "#FFF5E1" },
+                    links: { enable: true, color: "#FFF5E1", distance: 120, opacity: 0.4 },
                 }
             });
         }
-    }, [particlesLoaded]); // Run only when particles are loaded
+    }, [particlesLoaded]);
 
-    return <div id="tsparticles" className="bg-pan-tl"></div>;
+    return (
+        <div id="projectParticles" className="absolute inset-0 pointer-events-none"></div>
+    );
 };
 
-export default Background;
+export default ProjectParticles;

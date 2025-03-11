@@ -18,8 +18,10 @@ import html from './assets/images/html.png';
 import tailwind from './assets/images/tailwind.png';
 import flask from './assets/images/flask.png';
 import docker from './assets/images/docker.png';
-import latex from './assets/images/latex.png';
-import css_ from './assets/images/css_.png';
+//import latex from './assets/images/latex.png';
+//import css_ from './assets/images/css_.png';
+import wireshark from './assets/images/wireshark.png'
+
 
 const Skills = () => {
   const technologies = [
@@ -29,6 +31,7 @@ const Skills = () => {
     { icon: cpp, name: 'C++' },
     { icon: linux, name: 'Linux' },
     { icon: git, name: 'Git' },
+    { icon: wireshark, name: 'Wireshark' },
     { icon: tensorflow, name: 'TensorFlow' },
     { icon: numpy, name: 'NumPy' },
     { icon: pandas, name: 'Pandas' },
@@ -36,12 +39,13 @@ const Skills = () => {
     { icon: sql, name: 'MySQL' },
     { icon: javascript, name: 'JavaScript' },
     { icon: html, name: 'HTML' },
-    { icon: css_, name: 'CSS' },
+    //{ icon: css_, name: 'CSS' },
     { icon: react, name: 'React' },
     { icon: tailwind, name: 'Tailwind CSS' },
     { icon: flask, name: 'Flask' },
     { icon: docker, name: 'Docker' },
     //{ icon: latex, name: 'LaTeX' },
+
   ];
 
   return (
@@ -52,7 +56,7 @@ const Skills = () => {
             className="flex flex-col items-center justify-center text-black relative group"
             variants={{
               floating: { y: [0, -10, 0], transition: { repeat: Infinity, duration: 3, delay: index * 0.1 } },
-              enlarged: { scale: 1.1, y: 0 }, // Stops floating and enlarges
+              enlarged: { scale: 1.1, y: 0 }, // stops floating and enlarges
             }}
             animate="floating"
             whileHover="enlarged"
