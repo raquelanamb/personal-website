@@ -11,7 +11,7 @@ It serves as a professional portfolio showcasing my projects, skills, and backgr
 - **Responsive Design** for all devices.
 
 
-### ⚡ Steps to Deploy:
+### Steps to Deploy:
 1. Install dependencies:
    ```
    npm install
