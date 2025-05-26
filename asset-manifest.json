@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.bd29417d.css",
-    "main.js": "/static/js/main.c9ef4cf8.js",
+    "main.css": "/static/css/main.c1160533.css",
+    "main.js": "/static/js/main.ae96f19a.js",
     "static/js/488.efc1a227.chunk.js": "/static/js/488.efc1a227.chunk.js",
     "static/media/website.png": "/static/media/website.be3db6963ec4e4be9fae.png",
     "static/media/arthur.jpg": "/static/media/arthur.bddb87ec8f0a89a8114b.jpg",
@@ -13,6 +13,8 @@
     "static/media/synthetic.png": "/static/media/synthetic.06ae329923713679bf9e.png",
     "static/media/flask.png": "/static/media/flask.0e7a55f7aebe182b22ad.png",
     "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.1815e00441357e01619e.ttf",
+    "static/media/roc.png": "/static/media/roc.30200226916da90db86c.png",
+    "static/media/ember_flame.png": "/static/media/ember_flame.cea7d5215016af230a7a.png",
     "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
     "static/media/scikit.png": "/static/media/scikit.7c81e0aa80c1924e4e7b.png",
     "static/media/numpy.png": "/static/media/numpy.7deccf79a3075b4304d8.png",
@@ -44,12 +46,12 @@
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "main.bd29417d.css.map": "/static/css/main.bd29417d.css.map",
-    "main.c9ef4cf8.js.map": "/static/js/main.c9ef4cf8.js.map",
+    "main.c1160533.css.map": "/static/css/main.c1160533.css.map",
+    "main.ae96f19a.js.map": "/static/js/main.ae96f19a.js.map",
     "488.efc1a227.chunk.js.map": "/static/js/488.efc1a227.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd29417d.css",
-    "static/js/main.c9ef4cf8.js"
+    "static/css/main.c1160533.css",
+    "static/js/main.ae96f19a.js"
   ]
 }
