@@ -1,18 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.75955bf8.css",
-    "main.js": "/static/js/main.dbd5a207.js",
+    "main.css": "/static/css/main.c1160533.css",
+    "main.js": "/static/js/main.a4fd8ac5.js",
     "static/js/488.efc1a227.chunk.js": "/static/js/488.efc1a227.chunk.js",
     "static/media/website.png": "/static/media/website.be3db6963ec4e4be9fae.png",
     "static/media/arthur.jpg": "/static/media/arthur.bddb87ec8f0a89a8114b.jpg",
     "static/media/harmoniac.png": "/static/media/harmoniac.fedb3f21934fe5cd1c35.png",
-    "static/media/ghidra.png": "/static/media/ghidra.b403598545e7f2c016cb.png",
     "static/media/linux.png": "/static/media/linux.f51f21f9129d01c5fce6.png",
     "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
     "static/media/myPhoto.jpg": "/static/media/myPhoto.0286ad03514e77a70948.jpg",
-    "static/media/ids.png": "/static/media/ids.fe34a82708b91083e929.png",
     "static/media/spotify_network.png": "/static/media/spotify_network.48d81a5337addcb2620c.png",
-    "static/media/boston_dashboard.png": "/static/media/boston_dashboard.a25e252a7e7b812bbc94.png",
     "static/media/synthetic.png": "/static/media/synthetic.06ae329923713679bf9e.png",
     "static/media/flask.png": "/static/media/flask.0e7a55f7aebe182b22ad.png",
     "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.1815e00441357e01619e.ttf",
@@ -44,17 +41,17 @@
     "static/media/docker.png": "/static/media/docker.c45696be551ca8df99d4.png",
     "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
     "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
+    "index.html": "/index.html",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/index.html",
-    "main.75955bf8.css.map": "/static/css/main.75955bf8.css.map",
-    "main.dbd5a207.js.map": "/static/js/main.dbd5a207.js.map",
+    "main.c1160533.css.map": "/static/css/main.c1160533.css.map",
+    "main.a4fd8ac5.js.map": "/static/js/main.a4fd8ac5.js.map",
     "488.efc1a227.chunk.js.map": "/static/js/488.efc1a227.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.75955bf8.css",
-    "static/js/main.dbd5a207.js"
+    "static/css/main.c1160533.css",
+    "static/js/main.a4fd8ac5.js"
   ]
 }
