@@ -9,7 +9,6 @@ import Skills from "./Skills";
 import Timeline from "./Timeline";
 import Education from "./Education";
 import Contact from "./Contact";
-import Awards from "./Awards";
 import ProjectParticles from "./ProjectParticles"; // New Particles component
 
 const App = () => {
