@@ -11,9 +11,62 @@ import synthetic from "./assets/images/synthetic.png";
 import hangman from "./assets/images/hangman.png";
 import spotify_network from "./assets/images/spotify_network.png";
 import website from "./assets/images/website.png"
+import ember_flame from "./assets/images/ember_flame.png"
+import roc from "./assets/images/roc.png"
+import ids from "./assets/images/ids.png"
+import boston_dashboard from "./assets/images/boston_dashboard.png"
+import ghidra from "./assets/images/ghidra.png"
 
 
 const projects = [
+  {
+    title: "Statistical and ML-Based Anomaly Detection for DoS/DDoS Attacks",
+    description: "Designed and evaluated a lightweight intrusion detection system (IDS) using the CIC-IDS2017 dataset to detect DoS and DDoS attacks. Implemented a statistical Z-score baseline and an Isolation Forest model to compare detection performance across low-rate and high-volume attack scenarios. Aggregated traffic into 5-second windows, engineered protocol- and volume-based features, and evaluated precision, recall, and F1-score. Results show statistical methods perform well for subtle handshake anomalies, while Isolation Forest excels at high-volume DDoS detection, highlighting the need for hybrid IDS designs.",
+    tags: ["Python", "Cybersecurity", "Network Security", "Intrusion Detection", "Anomaly Detection", "Machine Learning"],
+    image: ids,
+    link: "https://github.com/raquelanamb/statistical-vs-ml-ids",
+  },
+    {
+    title: "Analysis of a Spotify Collaboration Network for Small-World Properties",
+    description: "Conducted a comprehensive network analysis of Spotify artist collaborations to explore small-world properties such as clustering and diameter. Analyzed a dataset of over 156,000 artists and 300,000 collaborative connections. Applied the Louvain method for community detection and examined genre- and region-specific subgraphs, identifying distinct collaboration patterns across global music industries. Findings revealed a scale-free network structure, significant clustering, and the central role of hubs in maintaining connectivity. This work demonstrates expertise in network analysis, graph theory, and the application of computational tools to large-scale datasets.",
+    tags: ["Python", "NetworkX", "Cytoscape", "Research", "Big Data", "Graph Theory", "Small-World Networks", "Applied Mathematics", "Collaboration Networks", "Matplotlib", "SciPy", "Scikit-learn"],
+    image: spotify_network,
+    link: "//doi.org/10.48550/arXiv.2503.09526",
+  },
+  {
+    title: "Feature Importance in Machine Learning Models for Static Malware Detection",
+    description: "Conducted a comparative feature-importance analysis of ensemble and neural network models for static malware detection using the EMBER 2018 dataset. Evaluated how different architectures leverage PE file features and examined robustness under feature perturbation.",
+    tags: ["Python", "Malware Detection", "Cybersecurity", "Machine Learning", "PE File Analysis", "Feature Importance", "Model Interpretability"],
+    image: ember_flame,
+    link: "https://github.com/raquelanamb/static-malware-feature-importance",
+  },
+  {
+    title: "Fog of War Chess Assistant",
+    description: "Leading the development of a Fog of War Chess Assistant, a senior capstone project leveraging artificial intelligence and an LLM to process natural language input and provide strategic move suggestions in the Fog of War chess variant. The system translates user commands into structured instructions for the chess engine and delivers move suggestions to the advantaged user via the LLM. The project also explores the integration of a Generative Adversarial Network (GAN) to enhance move prediction capabilities. Built using Python, Chess-Python libraries, and SQLite for robust data management. Demonstrates expertise in AI/ML, natural language processing, and database integration within a strategic gaming context.",
+    tags: ["Python", "SQL", "NLP", "AI", "LLMs", "ML", "Tkinter"],
+    image: fogofwar,
+    //link: ,
+  },
+  {
+    title: "Decompilation Across Instruction Set Architectures",
+    description: "Conducted a comparative analysis of decompiler fidelity across x86, ARM, MIPS, and RISC-V architectures. Wrote simple C programs and compiled them into architecture-specific object files, analyzed raw assembly via objdump, and evaluated Ghidra’s ability to reconstruct high-level C constructs. Findings highlight how ISA design, calling conventions, endianness, and compiler optimizations impact semantic recovery—particularly for structs, byte-level memory access, and function detection.",
+    tags: ["C", "Computer Systems", "Reverse Engineering", "Decompilers", "Ghidra", "Assembly", "ISAs"],
+    image: ghidra,
+  },
+  {
+    title: "Boston Crime Insights",
+    description: "Developed an interactive Streamlit dashboard to analyze and visualize Boston Police Department incident data from 2015–present. Integrated Oracle Cloud datasets with Boston’s live Open Data API, enabling real-time updates and filtering by year, crime type, and district. Implemented dynamic Altair charts (time series, heatmaps, bar charts, and geographic maps) for comprehensive trend exploration. Optimized performance through data caching, downsampling, and memory management for scalability on Streamlit Cloud.",
+    tags: ["Python", "Streamlit", "Altair", "Pandas", "Data Visualization", "API Integration", "Big Data"],
+    image: boston_dashboard,
+    link: "https://github.com/raquelanamb/Boston-crime-dashboard",
+  },
+  {
+    title: "Leveraging ML to Predict Dropout Likelihood in Higher Education",
+    description: "Trained and evaluated XGBoost, Random Forest, Logistic Regression, and Decision Tree models to predict student dropout risk based on demographic, academic, and financial features. Prioritized sensitivity to enable early intervention and support at-risk students. This project demonstrates the potential of AI to support equity and success in education by enabling data-informed student support systems.",
+    tags: ["Python", "Machine Learning", "Predictive Modeling", "Data Science"],
+    image: roc,
+    link: "https://github.com/raquelanamb/dropout-prediction",
+  },
   {
     title: "Masqueraded File Checker",
     description: "A program that analyzes files within a user-provided folder to identify potential mismatches between their extensions and hex file signatures. Designed to detect masqueraded files, it leverages a robust dictionary of common and rare file types to verify integrity while accounting for extensions without signatures. This tool offers an efficient way to flag inconsistencies and unrecognized file formats, providing valuable insights into file authenticity.",
@@ -42,30 +95,16 @@ const projects = [
     link: "https://raquelbush.com",
   },
   {
-    title: "Fog of War Chess Assistant",
-    description: "Leading the development of a Fog of War Chess Assistant, a senior capstone project leveraging artificial intelligence and an LLM to process natural language input and provide strategic move suggestions in the Fog of War chess variant. The system translates user commands into structured instructions for the chess engine and delivers move suggestions to the advantaged user via the LLM. The project also explores the integration of a Generative Adversarial Network (GAN) to enhance move prediction capabilities. Built using Python, Chess-Python libraries, and SQLite for robust data management. Demonstrates expertise in AI/ML, natural language processing, and database integration within a strategic gaming context.",
-    tags: ["Python", "SQL", "NLP", "AI", "LLMs", "ML", "Tkinter"],
-    image: fogofwar,
-    //link: ,
-  },
-  {
-    title: "Synthetic Number Generator",
-    description: "Designed and implemented a Generative Adversarial Network (GAN) to generate synthetic numbers, showcasing expertise in deep learning and generative modeling. Designed and trained the GAN using a standard architecture consisting of a generator and discriminator, where the generator produced synthetic numbers and the discriminator evaluated their authenticity against real data. Optimized model performance through iterative adversarial training, hyperparameter tuning, and loss function analysis. This project demonstrated proficiency in deep learning, neural network design, and practical applications of generative modeling for synthetic data generation.",
-    tags: ["Google Colab", "Python", "GANs", "ML", "Neural Network Architecture Design", "Deep Learning", "Synthetic Data Generation", "Adversarial Training"],
-    image: synthetic,
-  },
-  {
     title: "Smart Hangman",
     description: "Designed and implemented an advanced Hangman game with a \"clever\" twist, featuring dynamic wordlist optimization to challenge players based on their guesses. The game includes multiple difficulty levels, debug mode for enhanced user control, and real-time feedback on guessed letters. Utilized algorithms to dynamically refine potential word lists and improve game interactivity. Demonstrated expertise in Python programming, algorithm design, and user experience enhancement in game development.",
     tags: ["Python", "Game Development", "Algorithm Design", "Dynamic Data Structures"],
     image: hangman,
   },
-  {
-    title: "Analysis of a Spotify Collaboration Network for Small-World Properties",
-    description: "Conducted a comprehensive network analysis of Spotify artist collaborations to explore small-world properties such as clustering and diameter. Analyzed a dataset of over 156,000 artists and 300,000 collaborative connections. Applied the Louvain method for community detection and examined genre- and region-specific subgraphs, identifying distinct collaboration patterns across global music industries. Findings revealed a scale-free network structure, significant clustering, and the central role of hubs in maintaining connectivity. This work demonstrates expertise in network analysis, graph theory, and the application of computational tools to large-scale datasets. Currently preparing it for publication.",
-    tags: ["Python", "NetworkX", "Cytoscape", "Research", "Big Data", "Graph Theory", "Small-World Networks", "Applied Mathematics", "Collaboration Networks", "Matplotlib", "SciPy", "Scikit-learn"],
-    image: spotify_network,
-    //link: ,
+    {
+    title: "Synthetic Number Generator",
+    description: "Designed and implemented a Generative Adversarial Network (GAN) to generate synthetic numbers, showcasing expertise in deep learning and generative modeling. Designed and trained the GAN using a standard architecture consisting of a generator and discriminator, where the generator produced synthetic numbers and the discriminator evaluated their authenticity against real data. Optimized model performance through iterative adversarial training, hyperparameter tuning, and loss function analysis. This project demonstrated proficiency in deep learning, neural network design, and practical applications of generative modeling for synthetic data generation.",
+    tags: ["Google Colab", "Python", "GANs", "ML", "Neural Network Architecture Design", "Deep Learning", "Synthetic Data Generation", "Adversarial Training"],
+    image: synthetic,
   },
 ];
 
